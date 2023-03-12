@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color: tan;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#addbutton').click(function(){
+                $('#box , h1').addClass("first");
+            });
+
+            $('#removeclass').click(function(){
+                $('#box').removeClass("first");
+            });
+
+            $('#toggleclass').click(function(){
+                $('#box , h1').toggleClass("first");
+            });
+
+            $('#add').click(function(){
+                $('#box , h1').css("background","blue");
+            });
+
+            $('#add').click(function(){
+                $('h1').css({"border":"5px dotted red"});
+            });
+
+        })
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="addbutton">addclass</button>
+      <button id="removeclass">removeclass</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

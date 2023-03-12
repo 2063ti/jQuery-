@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#append").click(function(){
+                $("#box").after("<h1>yahoo</h1>");
+            });
+
+            $("#prepend").click(function(){
+                $("#box").before("<h1>yahoo baba</h1>");
+            });
+
+            // $("#ajax").click(function(){
+            //     $.get("ajax.txt",function(data,status)
+            //     {
+            //         alert("data :"+data +"\n status :"+status);
+            //     });
+            // })
+
+            $("#ajax").click(function(){
+                // $.post("ajax.txt",
+                // {name :"donald duck :",city:"duckburg :"}
+                // ,function(data,status)
+                // {
+                //     alert("data :"+data +"\n status :"+status);
+                // });
+                $("#box").load("C:\Users\Hp\OneDrive\Documents\ajax.txt",function(responseTxt,statusTxt,xhr){
+                    if(statusTxt=="success")
+                    alert("external content loaded successfully");
+
+                if(statusTxt==Error)
+                alert("error :"+xhr.status+":"+xhr.statusTxt);
+                })
+            })
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="append">after</button>
+      <button id="prepend">before</button>
+      <button id="toggleclass">toggleclass</button>
+      <button id="ajax">ajax</button>
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            height: 200px;
+            width: 300px;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#ani1").click(function(){
+               console.log($("#box").hasClass("test"));
+                $("#box").animate({
+                    width : '+150px',
+                    borderWidth :'5px'
+                });
+                $("#box").animate({
+                    left : '200px'
+                },3000);
+                $("#box").animate({
+                    top : '300px'
+                });
+            });
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="ani1">animate</button>
+      
+    </body>
+    </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <script src="jq1.js">
+            </script>
+        <script>
+        $(document).ready(function(){
+        $("#btn").click(function(){
+        $("#getData").load("after.html",function(responseTxt,statusTxt,xhr){
+                 if(statusTxt=="success")
+                    alert("external content loaded successfully");
+
+                if(statusTxt==Error)
+                alert("error :"+xhr.status+":"+xhr.statusTxt);
+        });
+        });
+        });
+        </script>
+        </head>
+        <body>
+        <div id="getData"><h2>jQuery Ajax</h2></div>
+        <br>
+        <input type="button" value="Click to get Data" id="btn">
+
+</body>
+</html>
