@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            height: 200px;
+            width: 300px;
+        }
+        #inn{
+            display: flex;
+            background-color: antiquewhite;
+            border: 2px solid purple;
+            height: 200px;
+            width: 400px;
+            padding: 10px;
+        }
+        #mo{
+            background-color: aqua;
+            border: 2px solid orange;
+            height: 600px;
+            width: 700px;
+            padding: 10px;
+        }
+        #ou{
+            background-color: aquamarine;
+            border: 2px solid red;
+            height: 400px;
+            width: 500px;
+            padding: 10px;
+            position: absolute;
+        }
+  
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#ani1").click(function(){
+               // console.log($("#box").hasClass("test"));
+               
+                $("#box").animate({ left : "200px"},3000);
+            });
+            $("#stop1").click(function(){
+               // console.log($("#box").hasClass("test"));
+               
+                $("#box").stop(true);
+            });
+            
+           $("#d3").parent().css('background','red');
+          // $("#d3").parents().css('background','yellow');
+         //  $("#inn").parentsUntil("#mo").css('background','yellow');
+         //  $("#d3").offsetParent().css('background','yellow');
+           $("#d3").closest("div").css('background','yellow');
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <div id="mo">
+        <h3>main outer</h3>
+        <div id="ou">
+            <h3>outer </h3>
+            <div id="inn"><h3>inner </h3>
+                <div id="d1" style="border: 2px solid blueviolet; height:100px; width: 100px; margin: 5px;  padding: 10px;  background-color: aqua;">
+                    a
+                </div>
+                <div id="d2" style="border: 2px solid green; height:100px; width: 100px;   margin: 5px; padding: 10px; background-color: aqua;">b</div>
+                <div id="d3" style="border: 2px solid orange; height:100px; width: 100px; margin: 5px;   padding: 10px; background-color: aqua;">c</div>
+                <div id="d4" style="border: 2px solid red; height:100px; width: 100px; margin: 5px;   padding: 10px; background-color: aqua;">d</div>
+            </div>
+        </div>
+      </div>
+
+      <button id="ani1">animate</button>
+      <button id="stop1">stop</button>
+      
+    </body>
+    </html>
