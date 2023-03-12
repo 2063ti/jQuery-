@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: aquamarine;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+ 
+        $("#fadein").click(function(){
+            $("#box").fadeIn("slow");//you can give value slow,fast and in mili seconds
+        });
+
+        $("#fadeout").click(function(){
+            $("#box").fadeOut('slow',function(){ console.log("now it is hidden");});
+        });
+
+        $("#fadetoggle").click(function(){
+            $("#box").fadeToggle("1000");
+        });
+
+        $("#fadeto").click(function(){
+            $("#box").fadeTo(2000,0.5);
+        });
+     
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+     
+      <button id="fadein">fadeIn</button>
+      <button id="fadeout">fadeOut</button>
+      <button id="fadetoggle">fadetoggle</button>
+      
+      <button id="fadeto">fadeto</button>
+    </body>
+    </html>

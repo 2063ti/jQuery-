@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            height: 500px;
+            width: 500px;
+            background-color:antiquewhite;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+          $(document).mousemove(function(event)
+          {
+            $('#box').text("x :"+event.pageX + "  y : " + event.pageY)
+          });
+          $("#box").on("mousedown mouseover mouseout",function(event){
+            $("h2").html(event.type  +" : " +event.which);
+          });
+          $("#inputbox").on("keydown",function(){
+            $("h2").html(event.type  +" : " +event.which);
+          })
+        });
+    </script></head>
+    <body>
+      <h1>jquery event . which() method</h1><br><br>
+
+      <input type="text" id="inputbox"><br>
+      <div id="box">
+      </div>
+      <h2></h2>
+      <br><br>
+    
+
+    </body>
+    </html>

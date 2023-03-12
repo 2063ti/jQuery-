@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $('li').each(function(){
+               // $(this).text("hello");
+                console.log( $(this).text());
+            });
+           
+        });
+    </script></head>
+    <body>
+      <h1>jquery each () method</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+      <ul>
+        <li>orange</li>
+        <li>apple</li>
+        <li>banana</li>
+        <li>grapes</li>
+      </ul>
+
+      <button id="has">hasClass</button>
+      
+      <button id="append">append</button>
+
+      <button id="prepend">prepend</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

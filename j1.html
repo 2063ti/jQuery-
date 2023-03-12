@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            </title>
+<script src="jq1.js">
+</script>
+
+<script src="d1.js">
+</script>
+
+<script>
+        var counter = document.querySelector(".counter");
+        var followers = document.querySelector(".followers");
+        let count = 1;
+        setInterval(() => {
+            count++;
+            counter.innerHTML = count;
+        },1000)
+</script>
+      
+    </head>
+        <body>
+            <div class="container" style="border:5px solid red; margin:5px; padding: 5px; background-color: aqua;">
+                <h1 class="counter">1000</h1>
+                <p class="followers">followers</p>
+            </div><br><br>
+               
+            
+            
+            
+            
+            
+            <form id="fi">
+            <label>enter user name :</label>
+            <input type="text" id="fname" name="fname">
+
+   <br> <br>         
+            <label>class :</label>
+            <input type="text" id="class" name="class">
+<br><br> 
+            <label >county :<select id="country">
+                <option value="in">india</option>
+                <option value="uk">uk</option>
+                <option value="usa">usa</option>
+            </select></label><br>
+
+            <br><p id="p"></p>
+            <br>     <input type="submit" id="submit" value="submit">
+            <button id="t1">test</button>
+
+            <br><br>
+            <div id="test" style="border:1px solid red;margin-top:20px;"></div>
+            <ul>
+                <li>as1</li>
+                <li>as2</li>
+                <li>as3</li>
+                <li>as4</li>
+            </ul>
+
+           
+</form>
+        </body>
+    </html>

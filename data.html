@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+         /*   $("#box").click(function(event){
+               alert("the div element was clicked :");
+            });
+
+            $("h2").click(function(event){
+               alert("the h2 element was clicked :");
+            });
+
+            $("p").click(function(event){
+                event.stopPropagation();
+               alert("the p element was clicked :" + event.isPropagationStopped());
+            });
+
+            $("button").click(function(event){
+               alert("the button element was clicked :");
+            });*/
+            
+            $("p").each(function(i){
+              $(this).on("click",{value:i},function(event){
+                alert(event.data.value);
+              });
+            });
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+        <p>hello students how are you</p>
+        <p>hello students how are you</p>
+        <p>hello students how are you</p>
+        <br><br>
+        <button id="test">test button</button>
+      </div>
+      <br><br>
+
+      
+    <a href="http://www.yahoobaba.net" id="result">yahoo baba</a>
+    <br>
+    <a href="http://www.yahoobaba.net">yahoo baba 2</a>
+      
+
+    </body>
+    </html>

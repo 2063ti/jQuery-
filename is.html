@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+           // $('p').has('b').css('background','gold');
+           $('p').click(function(){
+            if($(this).parent().is('div')){
+               $(this).css('background','gold');
+            }
+           });
+           // if($('p').parent().is('div')){
+           //     console.log($('p').parent().is('div'));
+           // }
+        });
+    </script></head>
+    <body>
+      <h1>jquery has() & is () method </h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello <b>students </b>how are you</p>
+        <p>hello students how are you</p>
+        <p>hello <b>students </b>how are you</p>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="has">hasClass</button>
+      
+      <button id="append">append</button>
+
+      <button id="prepend">prepend</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

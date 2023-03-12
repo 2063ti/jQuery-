@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn jQuery</title>
+        <style>
+            body { font-family: arial}
+            #box{
+
+ //               background: pink;
+                padding: 10px;
+                border: 1px solid #000;
+
+            }
+           .first{background-color: tan;}
+        </style>
+        
+        <script src="jq1.js">
+        </script>
+    </head>
+    <body>
+        <h1>Yahoo Baba : jQuery nouse events</h1>
+
+        <div id="box">
+            <h2>Test box</h2>
+            <p>Lorem ipsum dolor sit amet,etc...</p>
+        </div>
+
+        <br><br>
+
+        <button id="addbutton">addclass</button>
+        <button id="removeclass">removeclass</button>
+        <button id="toggleclass">toggleclass</button>
+
+        <script>
+
+
+  
+    </script>
+          <script>
+          
+          $(document).ready(function(){
+            
+              $("#box").click(function(){
+                    $('#box').css ('background-color','green');
+                });
+
+            
+                $("#box").dblclick(function(){
+                    $('#box').css ('background-color','orange');
+                });
+
+                
+                $("#box").contextmenu(function(){
+                    $('#box').css ('background-color','blue');
+                });
+
+                
+                $("#box").mouseenter(function(){
+                    $('#box').css ('background-color','tan');
+                });
+
+
+                   
+            $('#addbutton').click(function(){
+                $("#box").addclass("first");
+            });
+
+            $("#addbutton").click(function(){
+                $("h1").addclass("first");
+            });
+                
+                $("#box").mouseleave(function(){
+                    $('#box').css ('background-color','purple');
+                });
+         });       
+         
+        </script>
+
+
+    </body>
+</html>

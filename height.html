@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #box1{
+        
+            border:10px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: cornflowerblue;
+            margin:10px;
+            padding: 10px;
+            text-align: justify;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#append").click(function(){
+                $("#box").append("<h1>yahoo</h1>");
+            });
+
+
+
+            
+            $("#prepend").click(function(){
+                $("#box").prepend("<h1>yahoo baba</h1>");
+            });
+
+            $("#width").click(function(){
+                console.log("width"+$("#box1").width());
+                console.log("innerwidth"+$("#box1").innerWidth());
+                console.log("outerwidth"+$("#box1").outerWidth());
+                console.log("outertwidth(true)"+$("#box1").outerWidth(true));
+            });
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <div id="box1">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="width">width</button>
+      <button id="height">height</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

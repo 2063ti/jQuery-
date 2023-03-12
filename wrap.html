@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color: tan;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+         
+
+            $('#removeclass').click(function(){
+                $('#box').removeClass("first");
+            });
+
+            $('#toggleclass').click(function(){
+                $('#box , h1').toggleClass("first");
+            });
+
+            $('#add').click(function(){
+                $('#box , h1').css("background","blue");
+            });
+
+            $('#add').click(function(){
+                $('h1').css({"border":"5px dotted red"});
+            });
+
+            $('#wrap').click(function(){
+                $('#box  p').wrap('<div class="first"></div>');
+            });
+
+            $('#unwrap').click(function(){
+                $('#box  p').unwrap();
+            });
+
+            
+            $('#wrapall').click(function(){
+                $('p').wrapAll('<div class="first"></div>');
+            });
+
+            $('#wrapinner').click(function(){
+                $('h1').wrapInner('<span class="first"></span>');
+              
+            });
+
+        })
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+      <p>hello students how are you</p>
+      <button id="wrap">wrap</button>
+      <button id="unwrap">unwrap</button>
+      <button id="toggleclass">toggleclass</button>
+      <button id="wrapall">wrapall</button>
+      <button id="wrapinner">wrapinner</button>
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

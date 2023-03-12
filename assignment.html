@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#fname").bind("click",function(){
+                alert("you are clicking on emp_name :");
+            });
+
+            $("#box").delegate("#p","click",function(){
+                $("#p").after("<p>click me for next</p>");
+            });
+
+            $("#number").blur(function(){
+               $(this).css("background","yellow");
+            });
+
+            $("#f1").submit(function(){
+                alert("your form has been submited :");
+            });
+            $("#b1").click(function(){
+                $("#box").hide("slow",function(){
+                    alert("your hide event is running ");
+                });
+            });
+
+            $("#b2").click(function(){
+                $("#box").show("slow",function(){
+                    $("p").text("your show method executed successfully");
+                });
+            });
+
+            $("#b3").click(function(){
+                $("#box").fadeIn(function(){
+                    alert("your fadein event is running ");});
+            });
+            
+            $("#b4").click(function(){
+                $("#box").fadeOut(function(){
+                    alert("your fadeout event is running ");});
+            });
+
+            $("#b5").click(function(){
+                $("#box").slideUp(function(){
+                    alert("your slideup event is running ");});
+            });
+
+            $("#b6").click(function(){
+                $("#box").slideDown(function(){
+                    alert("your slidedown event is running ");});
+            });
+
+            $("#box").mouseenter(function(){
+                $("#box").css("background","green");
+            });
+
+            $("#box").mouseleave(function(){
+                $("#box").css("background","purple");
+            });
+
+            $("#b7").click(function(){
+                $("#box").remove();
+            });
+
+            $("#b8").click(function(){
+                $("#box").empty();
+            });
+
+            $("#b9").click(function(){
+                let a = $("#box p").html();
+                alert("your html is :" + a);
+            });
+            
+            $("#b10").click(function(){
+                let a = $("#box p").text();
+                alert("your text is :" + a);
+            });
+
+            $("#b11").click(function(){
+                let a = $("#box").attr("type");
+                alert("your attribute is :" + a);
+            });
+
+            $("#f1").submit(function(){
+                let a = $("#fname").val();
+                let b = $("#number").val();
+                let c = $("#password").val();
+                alert(" emp name : " + a + "  emp id  : "+ b + "   password : "+c);
+            });
+
+            $("#b12").click(function(){
+                $("#box").append("<h3>you appended your content</h3>")
+            });
+
+            $("#b13").click(function(){
+                $("#box").prepend("<h3>you prepended your content</h3>")
+            });
+
+            $("#b14").click(function(){
+                $("#box").after("<h3>you  added content after the box</h3>")
+            });
+
+            $("#b15").click(function(){
+                $("#box").before("<h3>you  added content before the box</h3>")
+            });
+        });
+        </script>
+    <style>
+        #box{
+            background-color: bisque;
+            border: 3px solid red;
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+    <form style="background-color:aqua;" id="f1"><fieldset>
+        <legend>registration form </legend>
+
+        <br><br>
+        <label>emp_name :</label>
+        <input type="text" name="fname" id="fname">
+
+        <br><br>
+        <label>emp_id :</label>
+        <input type="number" name="number" id="number">
+
+        <br><br>
+        <label>password :</label>
+        <input type="password" name="password" id="password">
+
+        <br><br>
+        <label>city :</label>
+        <select id="city"><option>ahmedabad</option>
+            <option>mumbai</option>
+            <option>delhi</option>
+            <option>pune</option></select>
+
+            <br><br>
+        <label>gender :</label>
+        <input type="radio" name="gender" id="male">male
+        <input type="radio" name="gender" id="female">female
+
+        <br><br>
+        <label>hobby :</label>
+        <input type="checkbox" >cricket
+        <input type="checkbox" >vollyball
+        <input type="checkbox" >football
+
+        <br><br>
+        <button id="submit" type="submit">submit</button>
+
+    </fieldset>
+        </form>
+
+        <br><br> <br><br> 
+        <button id="b1" >hide</button>
+        <button id="b2" >show</button>
+        <button id="b3" >fadeIn</button>
+        <button id="b4">fadeout</button>
+        <button id="b5">slideup</button>
+        <button id="b6">slidedown</button>
+        <button id="b7">remove</button>
+        <button id="b8">empty</button>
+        <button id="b9">html</button>
+        <button id="b10">text</button>
+        <button id="b11">attr</button>
+        <button id="b12">append</button>
+        <button id="b13">prepend</button>
+        <button id="b14">after</button>
+        <button id="b15">before</button> 
+        
+
+
+
+        
+
+        <br><br> <br><br>
+        <div id="box">
+            <h1>jquery events</h1>
+            <p id="p">hi i am student of it . <span>i am currently working on</span> jquery.</p>
+        </div>
+    </body>
+</html>

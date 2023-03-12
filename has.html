@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#append").click(function(){
+                $("#box").append("<h1>yahoo</h1>");
+            });
+
+            $("#prepend").click(function(){
+                $("#box").prepend("<h1>yahoo baba</h1>");
+            });
+
+          
+            $("#has").click(function(){
+               // console.log($("#box").hasClass("test"));
+                var x=$("#box").hasClass("test");
+                if(x==true){
+                    console.log("yes");
+                }
+                else
+                { console.log("no");}
+            });
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="has">has class</button>
+      <button id="prepend">prepend</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+
+    </body>
+    </html>

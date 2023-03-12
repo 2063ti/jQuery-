@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            </title>
+<script src="jq1.js">
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#submit').click(function(){
+            $('.d1 h1').text("i belive in karma");
+            $('.d1 p').text("i belive in karma");
+
+        });
+    });
+</script>
+        </head>
+        <body><form id="fi">
+            <label>enter user name :</label>
+            <input type="text" id="fname" name="fname">
+
+   <br> <br>         
+            <label>class :</label>
+            <input type="text" id="class" name="class">
+<br><br> 
+            <label >county :<select id="country">
+                <option value="in">india</option>
+                <option value="uk">uk</option>
+                <option value="usa">usa</option>
+            </select></label><br>
+
+            <br>     <input type="submit" id="submit" value="submit">
+
+            <br><br>
+            <div id="test" style="border:1px solid red;margin-top:20px;"></div>
+
+            <div class="d1" style="border:2px solid green;margin:10px;">
+              <h1>text box</h1><br><br><br>
+              <p >i am student</p>
+
+            </div>
+</form>
+        </body>
+    </html>

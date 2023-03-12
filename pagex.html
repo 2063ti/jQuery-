@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            height: 500px;
+            width: 500px;
+            background-color:antiquewhite;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+          $(document).mousemove(function(event)
+          {
+            $('#box').text("x :"+event.pageX + "  y : " + event.pageY)
+          });
+        });
+    </script></head>
+    <body>
+      <h1>jquery page X ()  &  page Y () method</h1><br><br>
+
+      <div id="box">
+        
+       
+      </div>
+      <br><br>
+    
+
+    </body>
+    </html>

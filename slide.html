@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: aquamarine;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+                
+            $("#slideup").click(function(){
+                    $("#box").slideUp("slow");//you can give value slow,fast and in mili seconds
+                });
+        
+                $("#slideout").click(function(){
+                    $("#box").slideDown('slow',function(){ console.log("now it is hidden");});
+                });
+        
+                $("#slidetoggle").click(function(){
+                    $("#box").slideToggle("1000");});
+      
+     
+        });
+    </script></head>
+    <body>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="slideup">slideup</button>
+      <button id="slideout">slideout</button>
+      <button id="slidetoggle">slidetoggle</button>
+
+    
+    </body>
+    </html>

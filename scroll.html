@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head><style>
+        #box{
+            border:2px solid greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .d{
+            width: 230px;
+            height: 80px;
+            background-color: violet;
+            padding: 10px;
+            border:1px solid #000;
+            position: fixed;
+            left: 20px;
+            bottom: 50px;
+        }
+        .first{background-color:green;}
+    </style>
+    <script src="jq1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#append").click(function(){
+                $("#box").append("<h1>yahoo</h1>");
+            });
+
+            $("#prepend").click(function(){
+                $("#box").prepend("<h1>yahoo baba</h1>");
+            });
+
+                $(window).scroll(function(){
+                    $(".d").html("");
+                    $(".d").append("top : "+    $(window).scrollTop());
+                    $(".d").append("<br>left : "+   $(window).scrollLeft());
+            });  
+
+            $("#scroll").click(function(){
+                $(window).scrollTop(200);
+            });
+
+            
+            $("#scrollleft").click(function(){
+                $(window).scrollLeft(200);
+            });
+        });
+    </script></head>
+    <body style="width: 600px;">
+        <div class="d"></div>
+      <h1>yahoo baba:jquery</h1><br><br>
+
+      <div id="box">
+        <h2>text box</h2><br><br>
+        <p>hello students how are you</p>
+      </div>
+      <br><br>
+
+      <button id="scroll">scroll top</button>
+      <button id="scrollleft">scroll left</button>
+      <button id="toggleclass">toggleclass</button>
+
+      <button id="add">addstyle</button>
+      <br><br>
+      <P>1. ANDROID VS IOS MEET GODHWANI KEVAL BHATT MEET CHANDRA Present By Guided By Prof. BIPIN RUPADIYA
+        2.  Introduction  Company Profile  Android  IOS  Security  Publishing  Advantages  Dis Advantages  Which is best ?  Survey  Conclusion Outline
+        3. Introduction ANDROID AND IOS  Right now, It’s two horse race – IOS and Android everyone else is toast.  Android and IOS device are being adopted globally 10x faster than the PC, 2x faster than the 90s Internet Boom and 3x faster than recent social networks. ANDROIOD Android is Linux based based Operating System designed primarily for touchscreen mobile devices such as Smartphones and tablet computers. Initially developed by Android Inc. ,Which google backed financially and later purchased in 2005. IOS IOS (originally iPhone OS) is a mobile operating system created and developed by Apple Inc. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, iPad, and iPod touch. IOS provide good interface for mobile devices where user get more comfort in touch interface.
+        4. Google Inc.(Android)  Type : - Public  Industry : - Internet, Computer Software, Mobile OS  Founded : - September 4, 1998  Founder : - Larry Page And Sergey Brin  CEO : - Sundar Pichai (Oct 2, 2015 --)  Headquarters : - Mountain View, California, US  Revenue : - U.S $ 74.54 billion (2015)  Employees : - 61,814 (2015) Company Profile
+        5. Company Profile Apple Inc.(IOS)  Type : - Public  Industry : - Computer Hardware And Software, Consumer Electronics  Founded : - April 1, 1967  Founder : - Steve Jobs, Steve Woznaik And Ronald Wayne  CEO : - Tim Cook (Aug 14, 2011 --)  Headquarters : - Cupertino, California, US  Revenue : - U.S $ 233.7 billion (2015)  Employees : - 6,27,000 (2015)
+        6. Let’s Talk Android  Android is a Linux based Operating System.  Android is open source and Google releases the code under the Apache License.  Initially developed by Android, Inc., which Google bought in 2005.  Android was unveiled in 2007 along with the founding of the Open Handset Alliance – a consortium of hardware, software, and telecommunication companies devoted to advancing open standards for mobile devices.  Written in : - C (Core), C++, Java (UI)  OS family : - Unix Like  Initial release : - September 23, 2008 (7 years ago)  Latest release : - 7.0 "Nougat" (August 22, 2016)  Source Model : - Open source  Available in : - 100+ Languages  Kernel Type : - Monolithic (modified Linux kernel)
+        7. Android Architecture  Android operating system is a stack of software components which is roughly divided into five sections and four main layers as shown below in the architecture diagram.
+        8. Android Versions  The version history of the Android mobile operating system began with the release of the Android alpha in November 2007. The first commercial version, Android 1.0, was released in September 2008. Android is continually developed by Google and the Open Handset Alliance (OHA), and has seen a number of updates to its base operating system since the initial release.  Versions 1.0 and 1.1 were not released under specific code names, but since April 2009's Android 1.5 "Cupcake", Android versions have had confectionery-themed code names. Each is in alphabetical order, with the most recent being Android 7.0 "Nougat", released in August 2016.
+        9. Android Features 1. Ok Google 2. Automation 3. Android Pay 4. Virtual Reality 5. Widgets 6. Removable Storage And Battery 7. Custom ROMs 8. Controlling Your Phone From Your Computer 9. Clear Permissions System Top Features
+        10. Devices With Android Companies That Have Adopted Android
+        11. Let’s Talk IOS  IOS comprises the operating system and technologies that you use to run application natively on devices, such as ipad, iphone and ipod touch.  IOS even ensure that performance and battery space life don’t suffer even if you are multitasking.  IOS brings your iPhone and iPad to life with a beautifully easy-to-use design, indispensable apps and innovative security features.  Developer : - Apple Inc.  Written in : - C (Core), C++, Objective-C, Swift  OS family : - Unix Like, based on Darwin (BSD), OS X  Initial release : - June 29, 2007 (9 years ago)  Latest release : - 10.0.01 (14A403) (Sep 13, 2016)  Source model : - Closed source  Available in : - 40 Languages  Kernel Type : - Hybrid (XNU)  Default User Interface : - Cocoa touch (multi touch, GUI)  Personal Assistant : - Siri
+        12. Let’s Talk IOS  Xcode is an integrated development environment (IDE) containing a suite of software development tools developed by Apple for developing software for macOS, iOS, WatchOS and tvOS. First released in 2003, the latest stable release is version 7.3.1 and is available via the Mac App Store free of charge for OS X El Capitan users.  IOS is the second most popular mobile operating system in the world, after Android. Sales of iPads in recent years are also behind Android, while, by web use (a proxy for all use), iPads (using iOS) are still most popular.  During Apple's quarterly earnings call in January 27, 2015, Apple announced that they have now sold one billion iOS devices since 2007 (a little less than Android sold in 2014 only).  The iOS user interface is based on the concept of direct manipulation, using multi-touch gestures.
+        13. IOS Architecture  The Kernel in IOS is based on same variant of the basic mac Kernel that is found in MAC OSX.  IOS is The world’s most advanced mobile operating system.  In IOS there are four abstraction layers. Cocoa Touch is a UI framework for building software programs to run on iOS (for the iPhone, iPod Touch, and iPad), watchOS for the Apple Watch, and tvOS for the fourth-generation Apple TV, from Apple Inc. Graphics, audio, and video are handled by the Media layer. This layer contains a number of key technologies, such as Core Graphics, OpenGL ES and OpenAL, AV Foundation, Frameworks and Core Media. The Core Services layer is in charge of managing the fundamental system services that native iOS applications use. The Cocoa Touch layer relies heavily on the Core Services layer for some of its functionality. Most of the functionality provided by the three higher level layers is built upon the Core OS layer and its low level features. The Core OS layer provides a handful of frameworks that your application can use directly, such as the Accelerate and the Security frameworks.
+        14. IOS Features 1. Smarter Siri 2. Smoother Live Photos 3. iMessage 4. Voice Mail 5. Better Emoji 6. Feedback Form 7. 3D Touch 8. Lyrics In The Music App 9. Lightning Is Miles Better Than Micro USB Top Features
+        15. Devices With IOS IPHONE 6S IPAD MINI 4 IPOD TOUCH 6th Gen IPAD PRO IPAD AIR 2 IPHONE 5S
+        16. Let’s Talk About Security  Access control, isolation, web security  Encryption  Permission based-access control : -  Static list in manifest file  User presented with list at installation time  Wild West app marketplace: -  Nearly any app is allowed to market  Android specific malware  Access control, isolation, web security  Encryption  Permission based-access control : -  Dialog box at run time  Geolocation  Auto Erase
+        17. Publishing  Very Quick  Developer pays US$25 (Rs.1660) one time  Developer earns 70% revenue  Several stores: Google play, Amazon…  Paid apps available in 136 countries  Number of screenshots of apps, only short description  Days… and days… and days… (Many restriction)  Developer pays US$99 (Rs.6576) annually  Developer earns 70% revenue  App store only  Paid apps available in 155 countries  5 screenshots and description
+        18. Advantages  Android is open  Easy access to the Android App Market  It Gives you More Options to Fit your Budget  Highly Customizable  Less Restrictive App Policies  Can install a modified ROM  Widget  Ease of notification  Performance is awesome  Best gaming experience  Suits for business and gaming  Excellent UI and fluid responsive  Excellent security  Excellent for media entertainment  Fingerprint scanning gives tough security  Excellent camera quality even though megapixels are less
+        19. Disadvantages  Advertising  Wasteful Battery  Slow response  Continuous Internet connection  Overheating  This operating system has a lot of process in the background  Many applications contain virus  Not open source  Not flexible only supports iOS devices  The main disadvantages of using iOS Apps are costly  Devices are very pricey  Applications are very large when compared to other mobile platforms  Supports only single SIM  Repair costs are very pricey
+        20. Which is best?
+        21. Which is best?  Which is best between the two depends on your own personal preference. Apple fans will prefer the iPhone OS because it integrates perfectly with other Apple products such as the Apple Mac computers and laptops, the iPod and the iPad. Not only that but the unified email inbox is neat, and offers something that Android cell phones do not have – unless you find an app out there that offers this feature.  That’s something you cannot get with the iPhone operating system, because it is patented and not open source as Android is. Anything else that is email related, however, is also available on Android devices. Each offers great game options, although the open source nature of the Android OS will likely push it into the lead in this respect.  With regard to games, Android lags well behind iPhone- in fact it is next to impossible to find good games for the Android OS. Flash is another problem, though in this case with the iPhone OS. Apple has always been critical of Flash, and if you use Flash or want to access sites or apps that use it, then Apple will not allow you – Android will!
+        22. Survey Market Share Mobile OS Users Developer Rating  Android users are more humble, honest than iPhone owners : Study  People who use Android smartphones may have greater levels of honesty and humility than iPhone users, new research suggests.
+        23. Conclusion  In conclusion both the Android OS and the apple IOS have their own pluses and minuses. Both are equally strong contenders and are bound to rule the app marketplace with their own strength and positives.  There is very little between the two, although the open source nature of Android offers the opportunity for a more diverse range of apps, if not more in actual number. With the iPhone </P>
+    </body>
+    </html>
